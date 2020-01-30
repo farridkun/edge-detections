@@ -1,0 +1,163 @@
+html,
+body {
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+#app {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+}
+
+#panel {
+    float: left;
+    width: 400px;
+}
+
+#image-canvas {
+    float: left;
+    max-width: calc(100% - 460px);
+    left: 430px;
+    position: absolute;
+    top: 60px;
+}
+
+.btn {
+    background-color: #e7e7e7;
+    color: black;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin: 16px 0 !important;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #d5d0d0;
+}
+
+.blue {
+    background-color: #008CBA;
+    color: #fff;
+}
+
+.blue:hover {
+    background-color: #067093;
+}
+
+.light-green {
+    background-color: #8db95a;
+    color: #fff;
+}
+
+.light-green:hover {
+    background-color: #7ea650;
+}
+
+.detect-edge {
+    background-color: #555555;
+    color: #fff;
+}
+
+.detect-edge::before {
+    content: "Detect edges";
+}
+
+.detect-edge.running::before {
+    content: "Running";
+}
+
+.detect-edge:hover {
+    background-color: #636363;
+}
+
+.section {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+.header {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.section-header {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.small-header {
+    margin-top: 8px;
+    color: #03A9F4;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.input-div {
+    margin-bottom: 4px;
+}
+
+.input-div input[type="text"] {
+    left: 200px;
+    position: absolute;
+}
+
+.radio-div {
+    float: left;
+    margin-left: 8px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: relative;
+    margin: 1rem;
+    position: relative;
+    width: relative;
+}
+
+.card-panel {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 620px;
+    margin: 1rem;
+    position: relative;
+    width: 360px;
+}
+
+.card-box {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}

@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title> TUBES GPC-5 | DETEKSI TEPI </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="bg-animasi">
+        <div id="app" class="clearfix">
+            <div id="panel">
+                <input type="file" id="image-loader" name="imageLoader" style="display:none;" />
+                <a id="download-link" style="display:none;"></a>
+                <br>
+
+                <div class="top-group">
+                    <p class="header"> DETEKSI TEPI </p>
+                    <p class="small-header"> Untuk memenuhi tugas GPC-5 </p>
+                    <button class="btn light-green" id="upload-image"> Unggah Gambar </button>
+                    <button class="btn blue" id="reset"> Reset </button>
+                    <button class="btn" id="save-image">Simpan Gambar</button>
+                </div>
+
+                <div class="basic-filters section">
+                    <p class="section-header" hidden> Filter Basic </p>
+                    <button class="btn" id="greyscale" hidden> Greyscale </button>
+                    <button class="btn" id="sharpen" hidden>Sharpen</button>
+                    <button class="btn" id="invert" hidden> Invert </button>
+                </div>
+
+                <div class="edge-detection section">
+                    <p class="section-header" hidden> Deteksi Tepi </p>
+
+                    <p class="small-header" hidden> Gaussian Blur</p>
+                    <div class="input-div" hidden>
+                        Sigma (> 0.0)
+                        <input id="sigma" type="text" placeholder="1.4" hidden />
+                    </div>
+                    <div class="input-div" hidden>
+                        Ukuran Kernal
+                        <input id="kernel-size" type="text" placeholder="5" hidden />
+                    </div>
+                </div>
+
+                <p class="small-header"> Metode</p>
+                <div class="operators section clearfix">
+                    <div class="radio-div"><input id="sobel" type="radio" name="operator" checked> Sobel </div>
+                    <div class="radio-div"><input id="roberts" type="radio" name="operator"> Roberts </div>
+                    <div class="radio-div"><input id="prewitt" type="radio" name="operator"> Prewitt </div>
+                    <div class="radio-div"><input id="scharr" type="radio" name="operator"> Scharr</div>
+                </div>
+                <button class="btn" id="calculate-gradiant"> Eksekusi </button>
+
+                <p class="small-header" style="margin-top: 32px;" hidden> Non-maximum Suppression & Hysteresis </p>
+                <div class="input-div" hidden>
+                    Low threshold (0 ~ 255)
+                    <input id="low-threshold" type="text" placeholder="50" hidden />
+                </div>
+                <div class="input-div" hidden>
+                    High threshold (0 ~ 255)
+                    <input id="high-threshold" type="text" placeholder="100" hidden />
+                </div>
+
+                <button class="btn detect-edge" id="detect-edge" hidden> </button>
+            </div>
+        </div>
+        <canvas class="card card-box" id="image-canvas"></canvas>
+    </div>
+    </div>
+</body>
+<script src="js/edge_detection.js"></script>
+<script src="js/app.js"></script>
+<script src="js/vantajs/p5.min.js"></script>
+<script src="js/vantajs/vanta.topology.min.js"></script>
+<script>
+    VANTA.TOPOLOGY({
+        el: "#bg-animasi",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xfc1c1c,
+        backgroundColor: 0xffffff
+    })
+</script>
+
+</html>
